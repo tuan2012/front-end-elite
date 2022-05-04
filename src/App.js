@@ -1,17 +1,17 @@
 import logo from './logo.svg';
 import { Routes, Route, Link } from "react-router-dom";
+import Login from './pages/Login';
+
 
 function App() {
   return (
+
     <div>
-      {/* <Routes>
-        <Route path='/' element={<Home />} />
+      <Routes>
+     
         <Route path='/login' element={<Login />} />
-      </Routes> */}
-      {/* <TopBar /> */}
-      {/* <Home /> */}
-      {/* <Login /> */}
-      {/* <Footer /> */}
+      </Routes>
+   
     </div>
   );
 }

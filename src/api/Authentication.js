@@ -1,10 +1,10 @@
 import AxiosClient from "../axios/AxiosClient";
 import toastr from 'toastr';
 
-const login = async (email, inputPassword) => {
+const login =  (email, inputPassword) => {
     var loginSuccess = false;
 
-    await AxiosClient.post("/auth/login", {
+    AxiosClient.post("/public/users/login", {
         username: email,
         password: inputPassword
     })
@@ -16,11 +16,12 @@ const login = async (email, inputPassword) => {
             loginSuccess = true;
         })
         .catch((error) => {
-            let errors = error.response.data.errors;
+            // let errors = error.response.data.errors;
 
-            Object.keys(errors).forEach(key => {
-                toastr.error(errors[key], key);
-            });
+            // Object.keys(errors).forEach(key => {
+            //     toastr.error(errors[key], key);
+            // });
+            console.log(error.message)
             loginSuccess = false;
         });
 
